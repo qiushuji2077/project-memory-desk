@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mf-001",
+    "projectId": "demo-school-a",
+    "date": "2026-05-28",
+    "type": "当前",
+    "content": "阶段成果已交付，项目进入等待反馈阶段，后续修改以校方正式反馈为准。",
+    "status": "当前采用",
+    "source": "阶段复盘",
+    "relatedFiles": ["PPT", "DOCX"],
+    "createdAt": "2026-05-28T09:30:00+08:00",
+    "updatedAt": "2026-05-28T09:30:00+08:00"
+  },
+  {
+    "id": "mf-002",
+    "projectId": "demo-school-a",
+    "date": "2026-05-24",
+    "type": "校方确认",
+    "content": "项目主题、核心目标与结构方向可以作为当前版本继续推进。",
+    "status": "当前采用",
+    "source": "会议纪要",
+    "relatedFiles": ["MD"],
+    "createdAt": "2026-05-24T14:20:00+08:00",
+    "updatedAt": "2026-05-24T14:20:00+08:00"
+  },
+  {
+    "id": "mf-003",
+    "projectId": "demo-school-a",
+    "date": "2026-05-21",
+    "type": "我方判断",
+    "content": "评价机制不宜过早写得过细，先保留为待确认模块，避免后续返工。",
+    "status": "历史记录",
+    "source": "工作判断",
+    "relatedFiles": ["MD"],
+    "createdAt": "2026-05-21T18:10:00+08:00",
+    "updatedAt": "2026-05-21T18:10:00+08:00"
+  },
+  {
+    "id": "mf-004",
+    "projectId": "demo-school-a",
+    "date": "2026-05-12",
+    "type": "待确认",
+    "content": "早期讨论中出现过另一套课程命名，后续已被当前主题方向覆盖。",
+    "status": "已替代",
+    "source": "旧版草稿",
+    "relatedFiles": ["PDF"],
+    "createdAt": "2026-05-12T11:00:00+08:00",
+    "updatedAt": "2026-05-20T17:00:00+08:00"
+  },
+  {
+    "id": "mf-005",
+    "projectId": "demo-school-b",
+    "date": "2026-05-25",
+    "type": "当前",
+    "content": "访谈材料已经汇总，下一步需要把关键词按文化理念、课程表达和实施场景分组。",
+    "status": "当前采用",
+    "source": "访谈整理",
+    "relatedFiles": ["DOCX", "MD"],
+    "createdAt": "2026-05-25T10:00:00+08:00",
+    "updatedAt": "2026-05-25T10:00:00+08:00"
+  },
+  {
+    "id": "mf-006",
+    "projectId": "demo-school-b",
+    "date": "2026-05-20",
+    "type": "校方确认",
+    "content": "调研对象与材料目录确认无误，可以按现有样本进行分析。",
+    "status": "当前采用",
+    "source": "客户反馈",
+    "relatedFiles": ["XLSX"],
+    "createdAt": "2026-05-20T15:40:00+08:00",
+    "updatedAt": "2026-05-20T15:40:00+08:00"
+  },
+  {
+    "id": "mf-007",
+    "projectId": "demo-research",
+    "date": "2026-05-21",
+    "type": "我方判断",
+    "content": "研究问题已经收束，数据口径需要在进入开题文本前统一。",
+    "status": "历史记录",
+    "source": "研究笔记",
+    "relatedFiles": ["PDF", "MD"],
+    "createdAt": "2026-05-21T19:20:00+08:00",
+    "updatedAt": "2026-05-21T19:20:00+08:00"
+  },
+  {
+    "id": "mf-008",
+    "projectId": "demo-product",
+    "date": "2026-05-18",
+    "type": "当前",
+    "content": "首版原型采用三栏工作台，不加入自动整理按钮，先验证人工回填流程。",
+    "status": "当前采用",
+    "source": "原型评审",
+    "relatedFiles": ["PPT", "MD"],
+    "createdAt": "2026-05-18T13:00:00+08:00",
+    "updatedAt": "2026-05-18T13:00:00+08:00"
+  },
+  {
+    "id": "mf-009",
+    "projectId": "demo-product",
+    "date": "2026-05-15",
+    "type": "待确认",
+    "content": "权限边界暂未进入当前版本，后续根据团队协作需求再决定。",
+    "status": "历史记录",
+    "source": "需求列表",
+    "relatedFiles": ["MD"],
+    "createdAt": "2026-05-15T16:30:00+08:00",
+    "updatedAt": "2026-05-15T16:30:00+08:00"
+  },
+  {
+    "id": "mf-010",
+    "projectId": "demo-client",
+    "date": "2026-05-16",
+    "type": "校方确认",
+    "content": "交付范围以正式邮件为准，聊天中新增的附件设想暂不进入最终版本。",
+    "status": "当前采用",
+    "source": "正式邮件",
+    "relatedFiles": ["PDF", "DOCX"],
+    "createdAt": "2026-05-16T09:15:00+08:00",
+    "updatedAt": "2026-05-16T09:15:00+08:00"
+  }
+]

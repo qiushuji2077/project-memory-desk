@@ -1,0 +1,509 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #17221f;
+  background: #eef2f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(63, 111, 104, 0.14), transparent 34%),
+    linear-gradient(315deg, rgba(151, 102, 64, 0.12), transparent 30%),
+    #eef2f1;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(420px, 1fr) minmax(300px, 380px);
+  gap: 14px;
+  min-height: 100vh;
+  padding: 14px;
+}
+
+.project-rail,
+.memory-stage,
+.flow-panel {
+  min-width: 0;
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 50px rgba(19, 34, 31, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.project-rail,
+.flow-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.memory-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 8px;
+  padding: 18px;
+  overflow: auto;
+}
+
+.brand,
+.stage-header,
+.flow-title,
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  justify-content: flex-start;
+  padding: 18px;
+  border-bottom: 1px solid rgba(34, 55, 50, 0.1);
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  background: #123b35;
+  color: #f7fbfa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 1.18;
+}
+
+h2 {
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.04;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.eyebrow {
+  margin-bottom: 5px;
+  color: #5e6f69;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-wrap {
+  display: grid;
+  gap: 8px;
+  padding: 14px 18px;
+  color: #66736f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.search-wrap input,
+.memory-form textarea {
+  width: 100%;
+  border: 1px solid rgba(34, 55, 50, 0.14);
+  border-radius: 8px;
+  outline: none;
+  background: #fbfdfc;
+  color: #17221f;
+}
+
+.search-wrap input {
+  height: 40px;
+  padding: 0 12px;
+}
+
+.search-wrap input:focus,
+.memory-form textarea:focus {
+  border-color: rgba(30, 99, 86, 0.52);
+  box-shadow: 0 0 0 4px rgba(30, 99, 86, 0.1);
+}
+
+.project-list {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 14px;
+  overflow: auto;
+}
+
+.project-button {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 10px;
+  align-items: start;
+  width: 100%;
+  min-height: 86px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.project-button:hover,
+.project-button.active {
+  border-color: rgba(32, 95, 85, 0.2);
+  background: #f5faf8;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: #2f8f72;
+  box-shadow: 0 0 0 4px rgba(47, 143, 114, 0.12);
+}
+
+.project-copy {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.project-copy strong {
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+
+.project-copy small {
+  color: #6a746f;
+}
+
+.project-tags,
+.file-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project-tags em,
+.file-chips i,
+.source-chip,
+.date-pill,
+.flow-title > span {
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 999px;
+  background: #f4f5f0;
+  color: #56635f;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.project-tags em {
+  padding: 3px 7px;
+}
+
+.date-pill,
+.flow-title > span {
+  flex-shrink: 0;
+  padding: 7px 10px;
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.state-card {
+  display: grid;
+  min-height: 92px;
+  align-content: space-between;
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 8px;
+  padding: 13px;
+  background: #f8faf9;
+}
+
+.state-card span {
+  color: #687570;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.state-card strong {
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+  color: #132a25;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.final-memory,
+.entry-panel {
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.final-memory p {
+  color: #26352f;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.prompt-card {
+  display: grid;
+  gap: 10px;
+  min-height: 250px;
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 8px;
+  background: #f9fbfa;
+  padding: 12px;
+}
+
+.prompt-card strong {
+  color: #17221f;
+}
+
+.prompt-card p {
+  margin-top: 5px;
+  color: #66736f;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.prompt-card pre {
+  overflow: auto;
+  max-height: 126px;
+  margin: 0;
+  border-radius: 8px;
+  background: #202a28;
+  color: #dfeee9;
+  padding: 10px;
+  white-space: pre-wrap;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.prompt-card button,
+.memory-form button {
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: #1e6356;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 780;
+}
+
+.prompt-card button:hover,
+.memory-form button:hover {
+  background: #174e44;
+}
+
+.memory-form {
+  display: grid;
+  gap: 10px;
+}
+
+.memory-form textarea {
+  min-height: 116px;
+  resize: vertical;
+  padding: 12px;
+  line-height: 1.6;
+}
+
+.memory-form button {
+  justify-self: end;
+  min-width: 112px;
+  padding: 0 16px;
+}
+
+.flow-panel {
+  padding: 16px;
+}
+
+.flow-title {
+  flex-shrink: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(34, 55, 50, 0.1);
+}
+
+.flow-list {
+  display: grid;
+  gap: 10px;
+  overflow: auto;
+  padding-top: 12px;
+}
+
+.flow-item {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 8px;
+  background: #fbfcfb;
+  padding: 12px;
+}
+
+.flow-meta,
+.flow-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.flow-meta time {
+  color: #5e6f69;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.type-tag,
+.memory-status {
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.type-current {
+  background: #dff1ec;
+  color: #155247;
+}
+
+.type-confirmed {
+  background: #e1e8f5;
+  color: #254d80;
+}
+
+.type-judgement {
+  background: #f3e7d2;
+  color: #714d22;
+}
+
+.type-pending {
+  background: #f1dedc;
+  color: #813e37;
+}
+
+.flow-item p {
+  color: #24332e;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.memory-status.is-current {
+  background: #214a42;
+  color: #f7fbfa;
+}
+
+.memory-status.is-history {
+  background: #e9ecea;
+  color: #4d5c57;
+}
+
+.memory-status.is-replaced {
+  background: #3d4240;
+  color: #ffffff;
+}
+
+.source-chip,
+.file-chips i {
+  padding: 4px 8px;
+}
+
+.toast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  transform: translateY(16px);
+  border-radius: 8px;
+  background: #101b18;
+  color: #ffffff;
+  padding: 12px 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 160ms ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  }
+
+  .flow-panel {
+    grid-column: 1 / -1;
+    max-height: 460px;
+  }
+}
+
+@media (max-width: 760px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .state-grid,
+  .prompt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-header,
+  .brand,
+  .flow-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
