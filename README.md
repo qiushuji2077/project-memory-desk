@@ -68,7 +68,7 @@ npm run build
 
 ## 隐私说明
 
-开源仓库不包含真实项目数据，demo 数据均为匿名模拟。用户应避免把真实客户资料提交到公开仓库，并建议将真实 workspace、private、uploads、recordings、exports 等目录放入 `.gitignore`。
+开源仓库不包含真实项目数据，demo 数据均为匿名模拟。建议用户应在本地将真实 workspace、private、uploads、recordings、exports 等目录放入 `.gitignore`。
 
 ## 未来计划
 
