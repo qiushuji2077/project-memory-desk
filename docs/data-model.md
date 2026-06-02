@@ -34,15 +34,23 @@ The current data model is JSON-first and easy to migrate.
   "id": "mf-001",
   "projectId": "demo-school-a",
   "date": "2026-05-28",
-  "type": "当前",
-  "content": "阶段成果已交付。",
+  "type": "定",
+  "content": "阶段成果已交付，项目进入等待反馈阶段。",
   "status": "当前采用",
-  "source": "阶段复盘",
+  "source": "对方确认",
   "relatedFiles": ["PPT", "DOCX"],
   "createdAt": "2026-05-28T09:30:00+08:00",
   "updatedAt": "2026-05-28T09:30:00+08:00"
 }
 ```
+
+`type` uses the closed [记忆流规范 v1](memory-flow-spec.md) vocabulary; `source` is the `【来源】` annotation:
+
+- `定`: 已拍板、贯穿全篇的口径（已确认流）
+- `判断`: 影响后续取舍的专业判断（判断流）
+- `原话`: 不可改写的原始表述（已确认流）
+- `待确认`: 尚未拍板、会卡住后续的问题（当前流）
+- `废弃`: 被推翻的旧结论，仅在"全部"可见，不进入最终记忆
 
 Supported memory statuses:
 

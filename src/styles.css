@@ -428,6 +428,24 @@ h3 {
   color: #813e37;
 }
 
+/* 记忆流规范 v1 词表：定 / 原话 / 判断 / 待确认 / 废弃 */
+.type-decided {
+  background: #d8efe6;
+  color: #14503f;
+}
+
+.type-quote {
+  background: #efe6da;
+  color: #6a4a1f;
+  font-style: italic;
+}
+
+.type-retired {
+  background: #e6e8e7;
+  color: #6c7672;
+  text-decoration: line-through;
+}
+
 .flow-item p {
   color: #24332e;
   font-size: 14px;
@@ -452,6 +470,110 @@ h3 {
 .source-chip,
 .file-chips i {
   padding: 4px 8px;
+}
+
+.ghost-button {
+  flex-shrink: 0;
+  border: 1px solid rgba(30, 99, 86, 0.32);
+  border-radius: 8px;
+  background: #f4faf8;
+  color: #1e6356;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.ghost-button:hover {
+  background: #e7f3ef;
+}
+
+.flow-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-count {
+  border: 1px solid rgba(34, 55, 50, 0.12);
+  border-radius: 999px;
+  background: #f4f5f0;
+  color: #56635f;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.flow-tool {
+  border: 1px solid rgba(34, 55, 50, 0.16);
+  border-radius: 8px;
+  background: #fbfdfc;
+  color: #3a4843;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 740;
+}
+
+.flow-tool:hover {
+  border-color: rgba(30, 99, 86, 0.4);
+  background: #f1f7f4;
+}
+
+.flow-tool.active {
+  border-color: rgba(30, 99, 86, 0.5);
+  background: #e7f3ef;
+  color: #1e6356;
+}
+
+.flow-filter {
+  position: relative;
+}
+
+.flow-filter-pop {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 5;
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  min-width: 168px;
+  border: 1px solid rgba(34, 55, 50, 0.16);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 6px;
+  box-shadow: 0 16px 40px rgba(19, 34, 31, 0.16);
+}
+
+.flow-filter-pop.open {
+  display: grid;
+}
+
+.flow-filter-chip {
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #3a4843;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.flow-filter-chip:hover {
+  background: #f1f7f4;
+}
+
+.flow-filter-chip.on {
+  background: #1e6356;
+  color: #ffffff;
+}
+
+.flow-empty {
+  margin: 0;
+  padding: 24px 8px;
+  color: #79847f;
+  font-size: 13px;
+  text-align: center;
 }
 
 .toast {
