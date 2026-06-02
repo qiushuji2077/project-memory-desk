@@ -1,7 +1,7 @@
 [
   {
     "id": "mf-001",
-    "projectId": "demo-school-a",
+    "projectId": "demo-delivery-a",
     "date": "2026-05-28",
     "type": "定",
     "content": "阶段成果已交付，项目进入等待反馈阶段；后续修改以对方正式反馈为准。",
@@ -13,7 +13,7 @@
   },
   {
     "id": "mf-002",
-    "projectId": "demo-school-a",
+    "projectId": "demo-delivery-a",
     "date": "2026-05-24",
     "type": "定",
     "content": "项目主题、核心目标与结构方向已拍板，作为当前版本继续推进。",
@@ -25,7 +25,7 @@
   },
   {
     "id": "mf-003",
-    "projectId": "demo-school-a",
+    "projectId": "demo-delivery-a",
     "date": "2026-05-21",
     "type": "判断",
     "content": "评价机制先保留为待确认模块，不过早写细——因为细则一旦写死，后续返工成本很高。",
@@ -37,7 +37,7 @@
   },
   {
     "id": "mf-004",
-    "projectId": "demo-school-a",
+    "projectId": "demo-delivery-a",
     "date": "2026-05-12",
     "type": "废弃",
     "content": "早期另一套命名方向已被当前主题覆盖，不再沿用（防止后续又被捡回）。",
@@ -49,10 +49,10 @@
   },
   {
     "id": "mf-005",
-    "projectId": "demo-school-b",
+    "projectId": "demo-discovery",
     "date": "2026-05-25",
     "type": "待确认",
-    "content": "访谈关键词如何分组（理念 / 表达 / 实施场景）尚未拍板，会卡住后续方案写作。",
+    "content": "访谈关键词如何分组（背景 / 需求 / 实施场景）尚未拍板，会卡住后续方案写作。",
     "status": "当前采用",
     "source": "访谈整理",
     "relatedFiles": ["DOCX", "MD"],
@@ -61,7 +61,7 @@
   },
   {
     "id": "mf-006",
-    "projectId": "demo-school-b",
+    "projectId": "demo-discovery",
     "date": "2026-05-20",
     "type": "定",
     "content": "调研对象与材料目录确认无误，可按现有样本进行分析。",
@@ -73,7 +73,7 @@
   },
   {
     "id": "mf-011",
-    "projectId": "demo-school-b",
+    "projectId": "demo-discovery",
     "date": "2026-05-19",
     "type": "原话",
     "content": "“我们要的是能落地的东西，不是又一本好看的册子。”",

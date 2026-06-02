@@ -6,12 +6,12 @@ The current data model is JSON-first and easy to migrate.
 
 ```json
 {
-  "id": "demo-school-a",
-  "name": "示例学校 A",
+  "id": "demo-delivery-a",
+  "name": "示例交付项目 A",
   "status": "等待反馈",
-  "tags": ["教育咨询", "课程方案"],
+  "tags": ["客户交付", "方案迭代"],
   "lastUpdated": "2026-05-28",
-  "summary": "匿名教育项目",
+  "summary": "匿名交付项目",
   "stateBlocks": {
     "current": "等待反馈",
     "decided": "主题、目标与结构方向",
@@ -32,7 +32,7 @@ The current data model is JSON-first and easy to migrate.
 ```json
 {
   "id": "mf-001",
-  "projectId": "demo-school-a",
+  "projectId": "demo-delivery-a",
   "date": "2026-05-28",
   "type": "定",
   "content": "阶段成果已交付，项目进入等待反馈阶段。",
