@@ -6,12 +6,12 @@ The current data model is JSON-first and easy to migrate.
 
 ```json
 {
-  "id": "demo-school-a",
-  "name": "示例学校 A",
+  "id": "demo-delivery-a",
+  "name": "示例交付项目 A",
   "status": "等待反馈",
-  "tags": ["教育咨询", "课程方案"],
+  "tags": ["客户交付", "方案迭代"],
   "lastUpdated": "2026-05-28",
-  "summary": "匿名教育项目",
+  "summary": "匿名交付项目",
   "stateBlocks": {
     "current": "等待反馈",
     "decided": "主题、目标与结构方向",
@@ -32,17 +32,25 @@ The current data model is JSON-first and easy to migrate.
 ```json
 {
   "id": "mf-001",
-  "projectId": "demo-school-a",
+  "projectId": "demo-delivery-a",
   "date": "2026-05-28",
-  "type": "当前",
-  "content": "阶段成果已交付。",
+  "type": "定",
+  "content": "阶段成果已交付，项目进入等待反馈阶段。",
   "status": "当前采用",
-  "source": "阶段复盘",
+  "source": "对方确认",
   "relatedFiles": ["PPT", "DOCX"],
   "createdAt": "2026-05-28T09:30:00+08:00",
   "updatedAt": "2026-05-28T09:30:00+08:00"
 }
 ```
+
+`type` uses the closed [记忆流规范 v1](memory-flow-spec.md) vocabulary; `source` is the `【来源】` annotation:
+
+- `定`: 已拍板、贯穿全篇的口径（已确认流）
+- `判断`: 影响后续取舍的专业判断（判断流）
+- `原话`: 不可改写的原始表述（已确认流）
+- `待确认`: 尚未拍板、会卡住后续的问题（当前流）
+- `废弃`: 被推翻的旧结论，仅在"全部"可见，不进入最终记忆
 
 Supported memory statuses:
 
